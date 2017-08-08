@@ -1,0 +1,16 @@
+
+<div id="app container">
+  <nav class="navbar">
+    <div class="col-md-6 col-md-offset-3">
+      <search service="$ctrl.searchService" result="$ctrl.searchResults"/>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="col-md-7">
+      <video-player video="$ctrl.currentVideo"/>
+    </div>
+    <div class="col-md-5">
+      <video-list videos="$ctrl.videos" on-click="$ctrl.selectVideo"/>
+    </div>
+  <div>
+</div>
