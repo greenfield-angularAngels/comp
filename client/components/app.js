@@ -1,17 +1,18 @@
 angular.module('comp')
 .component('app', {
   controller: function(dunno, $window) {
-    this.saved = window.exampleVideoData;
-    this.input = window.exampleVideoData[0];
+    this.saved = window.fakeData;
+    this.image = window.fakeData[0];
 
     // Drag to Saved List
     this.saveImage = (image) => {
       this.saved.push(image);
     };
-
-    this.updateImage = (data) => { //Moves Current Item to Main Search
+    
+    //Moves Current Item to Main Search
+    this.updateImage = (data) => { 
       console.log(data, 'should be one');
-      this.input = data;
+      this.image = data;
     };
 
   },

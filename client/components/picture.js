@@ -8,6 +8,6 @@ angular.module('comp')
     onClick: '<'
   },
   
-  templateUrl: 'client/templates/pictureEntry.html'
+  templateUrl: 'client/templates/picture.html'
 
 });

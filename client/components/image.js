@@ -1,8 +1,8 @@
 angular.module('video-player')
 
-.component('input', {
-  controller: function(input) {
-    console.log('controller', input);
+.component('image', {
+  controller: function(image) {
+    console.log('controller', image);
     this.handleClick = () => {
       
     }
@@ -19,6 +19,6 @@ angular.module('video-player')
     key: '<'
   },
 
-  templateUrl: 'client/templates/input.html'
+  templateUrl: 'client/templates/image.html'
 
 });
