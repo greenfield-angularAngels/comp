@@ -1,13 +1,13 @@
-# Project Name
+# Comp
 
 > Pithy project description
 
-## Team
+## Angular Angels
 
-  - teamMember
-  - teamMember
-  - teamMember
-  - teamMember
+  - Arthur Liou (artliou)
+  - Jerry Xia
+  - Pavan Sethi
+  - Sean Hong
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@
 - Node 6.4.x
 - Redis 2.6.x
 - Postgresql 9.1.x
-- etc
+- Angular
 - etc
 
 ## Development
@@ -51,3 +51,4 @@ View the project roadmap [here](LINK_TO_DOC)
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+ 
