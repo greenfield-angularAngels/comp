@@ -18,5 +18,8 @@
   "homepage": "https://github.com/greenfield-angularAngels/comp#readme",
   "dependencies": {
     "angular": "^1.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.1"
   }
 }
