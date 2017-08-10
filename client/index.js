@@ -1,7 +1,4 @@
 angular.module('comp', [])
-.config(function($sceDelegateProvider) {
-  $sceDelegateProvider.resourceUrlWhitelist([
-    'self',
-    'https://www.youtube.com/**'
-  ]);
+.config(function() {
+  console.log('Index Starting', this);
 });

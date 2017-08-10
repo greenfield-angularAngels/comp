@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/greenfield-angularAngels/comp#readme",
   "dependencies": {
-    "angular": "^1.6.5"
+    "angular": "^1.6.5",
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.17.4"
   }
 }

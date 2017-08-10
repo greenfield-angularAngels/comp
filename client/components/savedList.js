@@ -2,10 +2,9 @@ angular.module('comp')
 .component('savedList', {
 
   bindings: {
-    saved: '<',
+    images: '<',
     onClick: '<'
   },
 
-  templateUrl: 'client/templates/savedList.html'
-
+  templateUrl: '/templates/savedList.html'
 });

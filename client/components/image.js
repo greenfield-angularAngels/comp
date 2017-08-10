@@ -1,24 +1,20 @@
-angular.module('video-player')
-
+/***
+Individual Components for Returned Search. Upon Click
+***/
+angular.module('comp')
 .component('image', {
   controller: function(image) {
     console.log('controller', image);
     this.handleClick = () => {
-      
-    }
-    // this.youTube = () => {
-    //   youTube.getVideos(this.query, this.key, (data) => { 
-    //     this.result(data);
-    //   });
-    // };
+
+    };
   },
 
   bindings: {
-    service: '<',
     result: '<',
-    key: '<'
+    key: '<',
   },
 
-  templateUrl: 'client/templates/image.html'
+  templateUrl: 'templates/image.html'
 
 });
