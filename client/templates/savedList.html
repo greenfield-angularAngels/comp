@@ -1,8 +1,8 @@
 
-<ul class="video-list">
-  <video-list-entry
-    ng-repeat="video in $ctrl.videos"
-    video="video"
+<ul class="saved-list">
+  <picture
+    ng-repeat="image in $ctrl.savedList"
+    image="image"
     on-click="$ctrl.onClick"
   />
 </ul>
