@@ -3,7 +3,7 @@ var express = require('express');
 var api = require('../api/') //check with sean
 // var db = require('../database/index') //check with pav
 
-var reqest = require('request')
+var request = require('request')
 
 var app = express();
 
@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 
 app.get('/items', function (req, res) {
 
-  api.apiRequet(req.body, () => { //get fn name from sean
+  api.apiRequest(req.body, () => { //get fn name from sean
     res.send(data);
   })
 
