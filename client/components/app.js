@@ -1,14 +1,14 @@
 angular.module('comp')
 .component('app', {
   controller: function($scope, $window) {
-    this.images = window.fakeData;
+    this.items = window.fakeData;
     this.mainImage = window.fakeData[0];
 
     this.saved = null; //Will Update when GET is called
 
     // Drag to Saved List
     this.saveImage = (image) => {
-      this.images.push(image);
+      this.saved.push(image);
       // Post 
     };
     
