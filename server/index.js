@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var api =  require('../API_related/') //check with sean
+var originImgToSimilarImgs =  require('../API_related/API_GoogleCV_ImgToTxts.js')
 // var db = require('../database/index') //check with pav
 var request = require('request')
 var app = express();
@@ -10,10 +10,11 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
+app.post('/images', function (req, res) {
 
-app.get('/images', function (req, res) {
+  console.log(req.body.imageUri);
 
-  api.fiveGuessesFromGoogle(req.body, () => { 
+  originImgToSimilarImgs(req.body.imageUri, (data) => { 
     res.json(data);
   })
 
@@ -22,7 +23,7 @@ app.get('/images', function (req, res) {
 
 app.post('/user', function (req, res) {
 
-  db.save(req.body, () => {
+  db.saveImg(req.body, (data) => {
     res.send(data)
   }) //TODO -get correct fn name from pav
 });
@@ -30,9 +31,11 @@ app.post('/user', function (req, res) {
 
 app.get('/user', function (req, res) {
 
-  db.get(req.body, () => {
-    res.send(data)
-  }) //TODO -get correct fn name from pav
+  res.send('data test')
+
+  // db.get(req.body, () => {
+  //   res.send('data')
+  // }) //TODO -get correct fn name from pav
 });
 
 
