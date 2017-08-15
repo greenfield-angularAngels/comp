@@ -1,4 +1,5 @@
 var express = require('express');
+<<<<<<< HEAD
 var bodyParser = require('body-parser');
 var api =  require('../API_related/') //check with sean
 // var db = require('../database/index') //check with pav
@@ -8,6 +9,7 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json 
 app.use(bodyParser.json())
+
 
 
 app.get('/images', function (req, res) {
@@ -33,7 +35,6 @@ app.get('/user', function (req, res) {
     res.send(data)
   }) //TODO -get correct fn name from pav
 });
-
 
 
 app.listen(8080, function() {
