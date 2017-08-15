@@ -1,36 +1,40 @@
 var express = require('express');
-// var bodyParser = require('body-parser');
-var api = require('../api/') //check with sean
+var bodyParser = require('body-parser');
+var api =  require('../API_related/') //check with sean
 // var db = require('../database/index') //check with pav
-
 var request = require('request')
-
 var app = express();
-
 // parse application/x-www-form-urlencoded 
 app.use(bodyParser.urlencoded({ extended: false }))
- 
 // parse application/json 
 app.use(bodyParser.json())
 
 
-app.get('/items', function (req, res) {
 
-  api.apiRequest(req.body, () => { //get fn name from sean
-    res.send(data);
+app.get('/images', function (req, res) {
+
+  api.fiveGuessesFromGoogle(req.body, () => { 
+    res.json(data);
   })
 
 });
 
 
-app.post('/items', function (req, res) {
+app.post('/user', function (req, res) {
 
   db.save(req.body, () => {
-    res.send(status code)
-  }) //get correct fn name from pav
-
-
+    res.send(data)
+  }) //TODO -get correct fn name from pav
 });
+
+
+app.get('/user', function (req, res) {
+
+  db.get(req.body, () => {
+    res.send(data)
+  }) //TODO -get correct fn name from pav
+});
+
 
 app.listen(8080, function() {
   console.log('listening on port 8080!');
