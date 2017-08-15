@@ -1,0 +1,17 @@
+{
+  "name": "comp",
+  "description": "",
+  "main": "_.eslintrc.js",
+  "authors": [
+    "artliou <artyliou@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/greenfield-angularAngels/comp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
