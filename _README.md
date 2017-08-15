@@ -31,20 +31,6 @@
 - Angular
 - etc
 
-// [ADD VERSION NUMBERS BELOW]
-
-- Angular
-- Bootstrap
-- Node
-- Nodemon
-- MongoDB
-- Mongoose
-- Request
-- Bower
-- Cloudinary
-- Mocha/Chai OR Karma OR Signon
-
-
 ## Development
 
 ### Installing Dependencies
@@ -67,3 +53,4 @@ View the project roadmap [https://docs.google.com/document/d/1NuF4f3BU05sx95ocPk
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+ 
