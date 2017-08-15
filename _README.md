@@ -43,9 +43,11 @@ npm install
 bower install
 ```
 
+
+
 ### Roadmap
 
-View the project roadmap [here](LINK_TO_DOC)
+View the project roadmap [https://docs.google.com/document/d/1NuF4f3BU05sx95ocPkgrUCbjkPMqbpXjJteo16vJDO4/edit?usp=drive_web]
 
 
 ## Contributing

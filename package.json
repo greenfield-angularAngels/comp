@@ -1,0 +1,25 @@
+{
+  "name": "comp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "_.eslintrc.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greenfield-angularAngels/comp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greenfield-angularAngels/comp/issues"
+  },
+  "homepage": "https://github.com/greenfield-angularAngels/comp#readme",
+  "dependencies": {
+    "angular": "^1.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.1"
+  }
+}
