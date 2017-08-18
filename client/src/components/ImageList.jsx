@@ -13,7 +13,7 @@ const ImageList = ( {state, list, saveImage} ) => (
         list.urls.map( (image, index) => {
           return (
             <Image 
-              image={image} 
+              image={image}
               saveImage={saveImage}
               key={index}
             />
