@@ -4,6 +4,8 @@ var originImgToSimilarImgs =  require('../API_related/API_GoogleCV_ImgToTxts.js'
 // var db = require('../database/index') //check with pav
 var request = require('request')
 var app = express();
+
+app.use(express.static(__dirname + '/../client'));
 // parse application/x-www-form-urlencoded 
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json 
