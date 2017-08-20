@@ -1,13 +1,13 @@
 # Comp
 
-> Pithy project description
+> We want our users to be able to discover and save pictures they like according to our recommendations.  Our user will input a picture of theirs that they like and find others that are similar according to our technology.  They can then have a collection of similar photos to use for whatever purpose they choose - art work, stock photos for a company site, sharing with friends, etc.
 
 ## Angular Angels
 
   - Arthur Liou (artliou)
-  - Jerry Xia
-  - Pavan Sethi
-  - Sean Hong
+  - Jerry Xia (jerrysummer)
+  - Pavan Sethi (pavansethi)
+  - Sean Hong (sean0923)
 
 ## Table of Contents
 
@@ -21,17 +21,9 @@
 
 ## Usage
 
-> Some usage instructions
+> To begin using this application, upload a photo via the upload photo link. Comp will display the top similar results to your photo. You'll have the option to save photos you like to a personal collection for future viewing.
 
 ## Requirements
-
-- Node 6.4.x
-- Redis 2.6.x
-- Postgresql 9.1.x
-- Angular
-- etc
-
-// [ADD VERSION NUMBERS BELOW]
 
 - Angular
 - Bootstrap

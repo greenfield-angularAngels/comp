@@ -67,12 +67,12 @@ class App extends React.Component {
   }
 
   render() {
+    console.log('App Render Triggered')
     return (
       <div>
         <h1>Comp</h1>
         <div className="app">
           <ImageList list={this.state.data} saveImage={this.saveImage}/>
-
           <div className="category">
             <h3>Saved</h3>
             <SavedList saved={this.state.saved}/>
