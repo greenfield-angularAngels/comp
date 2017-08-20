@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var originImgToSimilarImgs =  require('../API_related/API_GoogleCV_ImgToTxts.js')
+var originImgToSimilarImgs =  require('../API_related_wo_Keys/API_GoogleCV_ImgToTxts.js')
 // var db = require('../database/index') //check with pav
 var request = require('request')
 var app = express();
