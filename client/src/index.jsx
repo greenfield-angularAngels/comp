@@ -39,7 +39,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       something: '',
-      twentyFiveUrls: [],
+      // twentyFiveUrls: [],
+      twentyFiveUrls: data,
       originImgUrl: {"imageUri": "https://s4.favim.com/orig/48/puppy-lion-cute-Favim.com-445038.jpg"},
       userInput: ''
     };
@@ -53,6 +54,7 @@ class App extends React.Component {
   Will make an ajax call to the server, which will grab all the saved images for the user, then render that to the user via setState.
   ***/
   componentDidMount() {
+<<<<<<< HEAD
 <<<<<<< HEAD
     console.log('Component Mounted!', data);
     // let that = this;
@@ -78,6 +80,9 @@ class App extends React.Component {
         });
 =======
     this.postOriginalImg(this.state.originImgUrl);
+=======
+    // this.postOriginalImg(this.state.originImgUrl);
+>>>>>>> Start from scatch
   }
 
   postOriginalImg(originalImgUrl) {
@@ -149,7 +154,7 @@ class App extends React.Component {
     this.setState({
       originImgUrl: originImgUrl
     });
-    this.postOriginalImg(originImgUrl);
+    // this.postOriginalImg(originImgUrl);
   }
 
 
@@ -218,7 +223,7 @@ class App extends React.Component {
         return (
           <div className="col-md-2 col-lg-2">
               <div className="thumbnail">
-                <img src={guessAndUrls.urls[1]} />
+                <img src={guessAndUrls.urls[0]} />
                 <div className="row">
                   <div className="col-md-2 col-lg-2"/>
                    <div className="col-md-4 col-lg-4"> <a href="#" className="btn btn-primary" role="button">Like !</a></div> 
