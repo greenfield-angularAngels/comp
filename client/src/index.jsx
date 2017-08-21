@@ -6,6 +6,9 @@ import Dropzone from 'react-dropzone';
 import data from './dummy_data.js';
 import ImageList from './components/ImageList.jsx';
 import SavedList from './components/SavedList.jsx';
+// http://www.michiganduckrescueandsanctuary.com/wp-content/uploads/2014/12/marold_donate_transparent_504.png
+// https://s4.favim.com/orig/48/puppy-lion-cute-Favim.com-445038.jpg
+// const originalImgUrl = {"imageUri": "https://s4.favim.com/orig/48/puppy-lion-cute-Favim.com-445038.jpg"};
 
 // TODO: We need to get this collection from Mongoose
 const PictureCollection = 'TODO'
@@ -35,11 +38,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      guess: undefined,
-      data: data[0],
-      saved: []
+      something: '',
+      twentyFiveUrls: [],
+      originImgUrl: {"imageUri": "https://s4.favim.com/orig/48/puppy-lion-cute-Favim.com-445038.jpg"},
+      userInput: ''
     };
-    this.saveImage = this.saveImage.bind(this);
+    this.postOriginalImg = this.postOriginalImg.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
 
@@ -47,6 +53,7 @@ class App extends React.Component {
   Will make an ajax call to the server, which will grab all the saved images for the user, then render that to the user via setState.
   ***/
   componentDidMount() {
+<<<<<<< HEAD
     console.log('Component Mounted!', data);
     // let that = this;
     // // Get all saved items from the DB
@@ -69,10 +76,26 @@ class App extends React.Component {
         that.setState({
           saved: results
         });
+=======
+    this.postOriginalImg(this.state.originImgUrl);
+  }
+
+  postOriginalImg(originalImgUrl) {
+    $.ajax({
+      method: 'POST',
+      url: '/images',
+      data: originalImgUrl,
+      success: (results) => {
+        console.log('Client POST Original Img Success', results);
+        this.setState({
+          twentyFiveUrls: results
+        })
+>>>>>>> Able to bring five pics from original pics
       },
       error: function(err) {
-        console.log('Client Err', err);
+        console.log('Client POST Err', err);
       }
+<<<<<<< HEAD
     });*/
 
   }
@@ -109,14 +132,31 @@ class App extends React.Component {
       // Do error handling with callback or promise
 
 
+=======
+    })
+  }
 
+  handleChange(e) {
+    this.setState({
+      userInput: e.target.value
+    })
+  }
+>>>>>>> Able to bring five pics from original pics
+
+  handleClick() {
+    var originImgUrl = {imageUri: this.state.userInput};
+    console.log('click ', originImgUrl)
+    this.setState({
+      originImgUrl: originImgUrl
+    });
+    this.postOriginalImg(originImgUrl);
   }
 
 
   render() {
-    console.log('App Render Triggered')
     return (
       <div>
+<<<<<<< HEAD
         <h1>Comp</h1>
         <button onClick={this.onFileUploaded}>Upload picture</button>
         <ImageUpload/>
@@ -128,9 +168,68 @@ class App extends React.Component {
             <h3>Saved</h3>
             <SavedList saved={this.state.saved}/>
           </div>
+=======
+>>>>>>> Able to bring five pics from original pics
 
+      <div className="well" id="title"><h1>ImgNest</h1></div>
+      
+      <div className="container"> 
+        <div className="row">
+          <div className="form-group">
+
+            <div className="col-md-6 col-md-offset-2 col-lg-6 col-lg-offset-2">
+              <input 
+                type="text" 
+                className="form-control input-lg" 
+                value={this.userInput}
+                placeholder="Search for..."
+                onChange={this.handleChange}
+              />
+            </div>
+            <div>
+              <p className="btn btn-success btn-lg" onClick={this.handleClick}> GO !</p>
+            </div>
+
+          </div>
         </div>
+      </div> 
+
+
+      <div className="container">
+          <div className="row">
+            <div className="col-md-8 col-md-offset-2">
+              <div className="thumbnail">
+                <img src={this.state.originImgUrl.imageUri} />
+                <div className="caption">
+                  {/* <h3>Thumbnail label</h3> */}
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
+
+       <div className="well"></div> 
+      {/* <hr/> */}
+
+      <div className="col-md-1 col-lg-1"/>
+    
+      <div className="row">
+      {this.state.twentyFiveUrls.map((guessAndUrls) => {
+        return (
+          <div className="col-md-2 col-lg-2">
+              <div className="thumbnail">
+                <img src={guessAndUrls.urls[1]} />
+                <div className="row">
+                  <div className="col-md-2 col-lg-2"/>
+                   <div className="col-md-4 col-lg-4"> <a href="#" className="btn btn-primary" role="button">Like !</a></div> 
+                  <div className="col-md-4 col-lg-4"> <a href="#" className="btn btn-success" role="button">Go !</a></div>
+                </div>
+              </div>
+            </div>
+        );
+      })}
+        </div>
+    </div> 
     );
   }
 }

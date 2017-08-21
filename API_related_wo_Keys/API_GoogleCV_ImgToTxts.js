@@ -16,14 +16,21 @@ var vision = require('@google-cloud/vision')({
 
 var originImgToSimilarImgs = (imageUri, callback) => {
 
+
   var image = { source: {imageUri: imageUri} }
   
   vision.labelDetection(image).then(response => {
     var fiveGuesses = [];
+    var count = 5;
 
-    response[0].labelAnnotations.forEach(function(resultsFromGoo) {
+    for (var i = 0; i < count; i++) {
+      var resultsFromGoo = response[0].labelAnnotations[i];
       fiveGuesses.push(resultsFromGoo.description);
-    });
+    }
+
+    // response[0].labelAnnotations.forEach(function(resultsFromGoo) {
+    //   fiveGuesses.push(resultsFromGoo.description);
+    // });
 
     textsToImgs(fiveGuesses, callback);
   }).catch(err => {
