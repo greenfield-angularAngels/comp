@@ -32,12 +32,18 @@ var originImgToSimilarImgs = (imageUri, callback) => {
     //   fiveGuesses.push(resultsFromGoo.description);
     // });
 
+      console.log(fiveGuesses);
+
     textsToImgs(fiveGuesses, callback);
   }).catch(err => {
     console.error('!!! ERR from GOOBLE CLOUD VISION API !!!');
   });
 
 };
+
+// var imageUri = 'https://s4.favim.com/orig/48/puppy-lion-cute-Favim.com-445038.jpg';
+// originImgToSimilarImgs(imageUri);
+// console.log('why');
 
 module.exports = originImgToSimilarImgs;
 

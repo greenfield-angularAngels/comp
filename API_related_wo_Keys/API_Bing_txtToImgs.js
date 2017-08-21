@@ -7,6 +7,9 @@ var Bing = require('node-bing-api')({ accKey: bingAccKeys });
 
 var textsToImgs = (fiveGuesses, sendResToClient) => {
 
+  console.log('in Bing');
+  console.log(fiveGuesses);
+
   var fiveGuessesAnd25Urls = [];
   var asyncCount = 0;
 
@@ -14,6 +17,12 @@ var textsToImgs = (fiveGuesses, sendResToClient) => {
 
     Bing.images(text, {count: 5}, function(error, res, body){
       
+      if (error) {
+        console.log(error);
+        console.log('err');
+        console.log('ERRRR!!!! ar BING API');
+      }
+
       var guess = text;
       var urls = [];
 
