@@ -8,3 +8,4 @@ var Image = ({image, saveImage}) => (
 );
 
 export default Image;
+
